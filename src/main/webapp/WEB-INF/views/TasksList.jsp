@@ -43,7 +43,7 @@
                 <td>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="id" value="${t.id}">
+                            <input type="checkbox" name="id" value="${t.id}" required>
                         </label>
                     </div>
                 </td>
