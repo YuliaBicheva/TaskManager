@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.bycheva.models.Task" table="tasks">
+        <id name="id" column="uid" type="int">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="name" type="java.lang.String"/>
+        <property name="description" column="description" type="java.lang.String"/>
+        <property name="priority" column="priority">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">edu.bycheva.models.TaskPriority</param>
+                <param name="type">3</param>
+            </type>
+        </property>
+        <property name="ready" column="ready" type="java.lang.Boolean"/>
+    </class>
+
+</hibernate-mapping>

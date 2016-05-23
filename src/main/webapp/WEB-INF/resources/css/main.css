@@ -1,0 +1,46 @@
+#task-table, .container{
+    margin:  0 auto;
+    width: 80%;
+}
+.form-group.button-list{
+    display: block;
+    margin: 20px auto 0px;
+    width: 80%;
+}
+
+.table-bordered  > thead > tr > td{
+    text-align:center;
+}
+.table-bordered  > thead > tr > td{
+    /*background: lightcyan;*/
+}
+
+.task-table > tbody td:not(:nth-child(3)){
+    width: 1%;
+    text-align: center;
+}
+/*.task-table td:nth-child(3),*/
+/*.task-table td:nth-child(4){*/
+    /*width: 10%;*/
+/*}*/
+.task-table > tbody td:last-child{
+    width: 50%;
+    text-align: left;
+}
+
+td img {
+    width: 20px;
+    height: 20px;
+}
+.paging{
+    width: auto;
+    float: right;
+}
+.right{
+    float: right;
+}
+
+.form-edit{
+    margin: 0 auto;
+    width: 70%;
+}
