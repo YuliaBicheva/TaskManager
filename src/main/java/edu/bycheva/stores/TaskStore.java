@@ -25,7 +25,7 @@ public class TaskStore implements TaskDAO {
     @Override
     @Transactional
     public int add(Task model) {
-        return (int) this.template.save(model);
+        return (int)this.template.save(model);
     }
 
     @Override

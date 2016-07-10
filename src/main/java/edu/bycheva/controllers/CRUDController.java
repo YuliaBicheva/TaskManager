@@ -25,7 +25,7 @@ public class CRUDController {
     public String showTasks(@RequestParam(value = "filter", required = false) String filter,
                             @RequestParam(value = "page", required = false) String pageNum,
                             ModelMap model){
-        PagedListHolder<Task> taskList = new PagedListHolder<>();
+        PagedListHolder<Task> taskList = new PagedListHolder<Task>();
         if(filter != null) //если фильтруем по готовности заданий
         {
             taskList.setSource((List<Task>) this.storages.taskStore.findByReady(Boolean.valueOf(filter)));

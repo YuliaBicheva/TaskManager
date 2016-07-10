@@ -1,4 +1,4 @@
-# TODOList
+# TODOList…
 
 Для создания и заполнения таблицы в базе данных используйте файл "database.sql" в папке "TODOList/sql"
 

@@ -9,7 +9,6 @@
     <artifactId>TaskManager</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-
     <developers>
         <developer>
             <name>Yulia Bycheva</name>
@@ -174,7 +173,6 @@
     </dependencies>
 
     <build>
-
         <finalName>TaskManager</finalName>
         <plugins>
             <plugin>
@@ -185,21 +183,21 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-jar-plugin</artifactId>-->
-            <!--<configuration>-->
-            <!--<archive>-->
-            <!--<manifest>-->
-            <!--<addClasspath>true</addClasspath>-->
-            <!--</manifest>-->
-            <!--</archive>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-
-
-
+            <!--Plugin for the Heroku deploying-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-
     </build>
 </project>

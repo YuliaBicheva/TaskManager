@@ -1,5 +1,6 @@
 package edu.bycheva.stores;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 public interface Storage<T> {
