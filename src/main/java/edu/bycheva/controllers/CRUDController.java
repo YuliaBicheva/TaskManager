@@ -53,7 +53,7 @@ public class CRUDController {
         model.addAttribute("priorities", this.storages.taskPriorityStore.values());
         model.addAttribute("pageCount", calcPageCount(taskList.getPageCount()));
         model.addAttribute("page", taskList.getPage());
-        return "TasksList";
+        return "Taskslist";
     }
 
     private int calcPageCount(int pageCount) {
@@ -84,10 +84,13 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/deleteTask", method = RequestMethod.GET)
-    public String deleteTask(@RequestParam("id") String id,
+    public String deleteTask(@RequestParam(value = "id", required = false) String id,
                              @RequestParam(value = "filter", required = false) String filter,
                              @RequestParam(value = "page", required = false) String pageNum,
                              ModelMap model){
+        if(id == null){
+            return "redirect: tasks";
+        }
         String[] uid = id.split(",");
         for(String idx: uid) {
             this.storages.taskStore.delete(Integer.valueOf(idx));
@@ -98,10 +101,13 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/setReady", method = RequestMethod.GET)
-    public String getEditingTask(@RequestParam("id") String id,
+    public String getEditingTask(@RequestParam(value = "id", required = false) String id,
                                  @RequestParam(value = "filter", required = false) String filter,
                                  @RequestParam(value = "page", required = false) String pageNum,
                                  ModelMap model){
+        if(id == null){
+            return "redirect: tasks";
+        }
         String[] uid = id.split(",");
         for(String idx: uid){
             Task task = this.storages.taskStore.get(Integer.valueOf(idx));

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 abstract class Base implements Serializable {
 
-    int id;
+    protected int id;
 
     public int getId() {
         return id;

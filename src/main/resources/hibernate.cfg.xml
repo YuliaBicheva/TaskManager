@@ -5,34 +5,34 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>&ndash;&gt;-->
         <!--<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        <!--&lt;!&ndash;<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>&ndash;&gt;-->
+        <!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>-->
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">root</property>-->
 
-        <property name="hibernate.connection.useUnicode">true</property>
-        <property name="hibernate.connection.useJDBCCompliantTimezoneShift">true</property>
-        <property name="hibernate.connection.useLegacyDatetimeCode">false</property>
-        <property name="hibernate.connection.serverTimezone">UTC</property>
-
-        <property name="hibernate.connection.charSet">UTF-8</property>
-        <property name="hibernate.connection.characterEncoding">UTF-8</property>
-
-        <property name="hibernate.connection.autoReconnect">true</property>
-        <property name="hibernate.connection.useSSL">false</property>
-
-        <property name="hibernate.connection.pool_size">1</property>
-
-        <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
-        <property name="hibernate.c3p0.min_size">7</property>
-        <property name="hibernate.c3p0.max_size">53</property>
-        <property name="hibernate.c3p0.timeout">100</property>
-        <property name="hibernate.c3p0.max_statements">50</property>
-        <property name="hibernate.c3p0.idle_test_period">3000</property>
-        <property name="hibernate.c3p0.validate">true</property>
+        <!--<property name="hibernate.connection.useUnicode">true</property>-->
+        <!--<property name="hibernate.connection.useJDBCCompliantTimezoneShift">true</property>-->
+        <!--<property name="hibernate.connection.useLegacyDatetimeCode">false</property>-->
+        <!--<property name="hibernate.connection.serverTimezone">UTC</property>-->
+<!---->
+        <!--<property name="hibernate.connection.charSet">UTF-8</property>-->
+        <!--<property name="hibernate.connection.characterEncoding">UTF-8</property>-->
+<!---->
+        <!--<property name="hibernate.connection.autoReconnect">true</property>-->
+        <!--<property name="hibernate.connection.useSSL">false</property>-->
+<!---->
+        <!--<property name="hibernate.connection.pool_size">1</property>-->
+<!---->
+        <!--<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>-->
+        <!--<property name="hibernate.c3p0.min_size">7</property>-->
+        <!--<property name="hibernate.c3p0.max_size">53</property>-->
+        <!--<property name="hibernate.c3p0.timeout">100</property>-->
+        <!--<property name="hibernate.c3p0.max_statements">50</property>-->
+        <!--<property name="hibernate.c3p0.idle_test_period">3000</property>-->
+        <!--<property name="hibernate.c3p0.validate">true</property>-->
 
 
 

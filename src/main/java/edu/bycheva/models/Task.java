@@ -3,8 +3,11 @@ package edu.bycheva.models;
 public class Task extends Base {
 
     private String name;
+
     private String description;
+
     private TaskPriority priority;
+
     private boolean ready;
 
     public Task() {}

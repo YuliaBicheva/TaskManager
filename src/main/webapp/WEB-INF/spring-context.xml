@@ -9,9 +9,18 @@
                            http://www.springframework.org/schema/tx
                            http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <context:property-placeholder location="classpath:db/postrges.properties" system-properties-mode="OVERRIDE"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${psgr.driver}"/>
+        <property name="url" value="${psgr.url}"/>
+        <property name="username" value="${psgr.user}"/>
+        <property name="password" value="${psgr.password}"/>
+    </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
